@@ -1,10 +1,10 @@
 package fr.olympp.kata.repository;
 
-import fr.olympp.kata.models.Clan;
+import fr.olympp.kata.models.Army;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClanRepository extends JpaRepository<Clan, Long> {
-    Clan getFirstByName(String name);
+public interface ArmyRepository extends JpaRepository<Army, Long> {
+    Army findByClanIdAndName(Long clanId, String armyName);
 }
