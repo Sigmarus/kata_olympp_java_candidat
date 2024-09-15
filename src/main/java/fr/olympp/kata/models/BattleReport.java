@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor
 public class BattleReport {
 
-    enum Status {
+    public enum Status {
         DRAW,
         ARMY1_WIN,
         ARMY2_WIN
