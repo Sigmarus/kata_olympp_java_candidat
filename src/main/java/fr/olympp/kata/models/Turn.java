@@ -3,9 +3,11 @@ package fr.olympp.kata.models;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.io.Serializable;
+
 @Getter
 @AllArgsConstructor
-public class Turn {
+public class Turn implements Serializable {
     private String nameArmy1;
     private String nameArmy2;
     private int damageArmy1;

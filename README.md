@@ -44,75 +44,75 @@ Chaque résolution de  bataille retourne un rapport de bataille qui contient :
 {
   "winner": null,
   "status": "DRAW",
-  "initialsClans": [
+  "initialClans": [
     {
-      "name": "troyes",
-      "army": [
+      "name": "Troy",
+      "armies": [
         {
-          "name": "armee1",
-          "fantassins": {
-            "nombresPersonnes": 100,
-            "attaque": 100,
+          "name": "army1",
+          "foot_soldiers": {
+            "nbUnits": 100,
+            "attack": 100,
             "defense": 100,
-            "vie": 100
+            "health": 100
           },
-          "armyAttaque": 10000,
+          "armyAttack": 10000,
           "armyDefense": 10000
         },
         {
-          "name": "armee1_1",
-          "fantassins": {
-            "nombresPersonnes": 100,
-            "attaque": 1000,
+          "name": "army1_1",
+          "foot_soldiers": {
+            "nbUnits": 100,
+            "attack": 1000,
             "defense": 100,
-            "vie": 100
+            "health": 100
           },
-          "armyAttaque": 100000,
+          "armyAttack": 100000,
           "armyDefense": 10000
         }
       ]
     },
     {
-      "name": "grecques",
-      "army": [
+      "name": "Athens",
+      "armies": [
         {
-          "name": "armee2_2",
-          "fantassins": {
-            "nombresPersonnes": 50,
-            "attaque": 50,
+          "name": "army2_2",
+          "foot_soldiers": {
+            "nbUnits": 50,
+            "attack": 50,
             "defense": 500,
-            "vie": 100
+            "health": 100
           },
-          "armyAttaque": 2500,
+          "armyAttack": 2500,
           "armyDefense": 25000
         }
       ]
     }
   ],
-  "histories": [
+  "history": [
     {
-      "armyName1": "armee1",
-      "armyName2": "armee2",
-      "degatArmy1": -7500,
-      "degatArmy2": 5000,
-      "nbFantassins1": 100,
-      "nbFantassins2": 0
+      "nameArmy1": "army1",
+      "nameArmy2": "army2_2",
+      "damageArmy1": -7500,
+      "damageArmy2": 5000,
+      "nbRemainingSoldiersArmy1": 100,
+      "nbRemainingSoldiersArmy2": 0
     },
     {
-      "armyName1": "armee1",
-      "armyName2": "armee2_2",
-      "degatArmy1": -7500,
-      "degatArmy2": -15000,
-      "nbFantassinsVivant1": 100,
-      "nbFantassinsVivant2": 50
+      "nameArmy1": "armee1",
+      "nameArmy2": "armee2_2",
+      "damageArmy1": -7500,
+      "damageArmy2": -15000,
+      "nbRemainingSoldiersArmy1": 100,
+      "nbRemainingSoldiersArmy2": 50
     },
     {
-      "armyName1": "armee1",
-      "armyName2": "armee2_2",
-      "degatArmy1": -7500,
-      "degatArmy2": -15000,
-      "nbFantassinsVivant1": 100,
-      "nbFantassinsVivant2": 50
+      "nameArmy1": "armee1",
+      "nameArmy2": "armee2_2",
+      "damageArmy1": -7500,
+      "damageArmy2": -15000,
+      "nbRemainingSoldiersArmy1": 100,
+      "nbRemainingSoldiersArmy2": 50
     }
   ]
 }

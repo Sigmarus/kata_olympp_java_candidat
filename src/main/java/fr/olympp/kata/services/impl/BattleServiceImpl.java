@@ -37,12 +37,8 @@ public class BattleServiceImpl implements BattleService {
     private void executeTurn(BattleReport report, Clan clan1, Clan clan2) {
         Army army1 = clan1.getArmies().get(0);
         Army army2 = clan2.getArmies().get(0);
-        int attackArmy1 = army1.getArmyCorps().getNbUnits() * army1.getArmyCorps().getAttack();
-        int attackArmy2 = army2.getArmyCorps().getNbUnits() * army2.getArmyCorps().getAttack();
-        int defenseArmy1 = army1.getArmyCorps().getNbUnits() * army1.getArmyCorps().getDefense();
-        int defenseArmy2 = army2.getArmyCorps().getNbUnits() * army2.getArmyCorps().getDefense();
-        int damageToArmy1 = attackArmy2 - defenseArmy1;
-        int damageToArmy2 = attackArmy1 - defenseArmy2;
+        int damageToArmy1 = army2.getArmyAttack() - army1.getArmyDefense();
+        int damageToArmy2 = army1.getArmyAttack() - army2.getArmyDefense();
         int soldiersLostByArmy1 = damageToArmy1 / army1.getArmyCorps().getHealth();
         int soldiersLostByArmy2 = damageToArmy2 / army2.getArmyCorps().getHealth();
         int remainingSoldiersArmy1 = army1.getArmyCorps().getNbUnits() - soldiersLostByArmy1;

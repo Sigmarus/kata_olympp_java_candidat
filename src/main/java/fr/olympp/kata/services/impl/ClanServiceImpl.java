@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class ClanServiceImpl implements ClanService {
 
     private final ClanRepository clanRepository;

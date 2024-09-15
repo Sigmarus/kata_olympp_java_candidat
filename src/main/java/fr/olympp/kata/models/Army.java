@@ -1,43 +1,34 @@
 package fr.olympp.kata.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Data
+@AllArgsConstructor
 @Entity(name = "army")
-public class Army {
+public class Army implements Serializable {
     @Id
     @GeneratedValue
     @JsonIgnore
     private Long id;
 
-    @Column
+    @OneToOne
+    @Column(name = "clan_id")
     private Long clanId;
 
     @Column(unique = true)
     private String name;
 
-    @Column
-    private ArmyCorps armyCorps;
-
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
-    private Integer armyAttack;
+    @OneToOne
+    @JoinColumn(name = "armyId")
+    private FootSoldierTroop armyCorps;
 
     public Integer getArmyAttack() {
         return armyCorps.getAttack() * armyCorps.getNbUnits();
     }
-
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
-    private Integer armyDefense;
 
     public Integer getArmyDefense() {
         return armyCorps.getDefense() * armyCorps.getNbUnits();

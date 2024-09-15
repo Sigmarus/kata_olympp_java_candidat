@@ -2,13 +2,14 @@ package fr.olympp.kata.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
-@Getter
+@Data
 @Entity(name = "clan")
-public class Clan {
+public class Clan implements Serializable {
     @Id
     @GeneratedValue
     @JsonIgnore
@@ -17,6 +18,7 @@ public class Clan {
     @Column
     private String name;
 
+    @ManyToOne
     @JoinColumn(name = "clanId")
     private List<Army> armies;
 }
